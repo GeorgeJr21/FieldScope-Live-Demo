@@ -357,3 +357,10 @@ See [audit and testing evidence](docs/TESTING.md) for the full test scope and un
 ## Live Demo pública (opcional)
 
 El repositorio incluye una variante desplegable mediante `Dockerfile` + `render.yaml`. En ese modo se sirve frontend y API desde el mismo dominio, se carga únicamente el dataset sintético y el estado de la UI identifica claramente que se usa el extractor determinístico de demo, no QVAC. Consulta `LIVE_DEMO.md`.
+# FieldScope
+
+FieldScope is an AI-assisted field intelligence platform
+for managing healthcare equipment installed-base information.
+
+🌐 Live Demo:
+https://fieldscope-live-demo.onrender.com
