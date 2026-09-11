@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: fieldscope-live-demo
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: PUBLIC_DEMO
+        value: "true"
+      - key: AUTO_SEED_DEMO
+        value: "true"
+      - key: QVAC_ENABLED
+        value: "false"
+      - key: QVAC_REQUIRED
+        value: "false"
+      - key: DATABASE_URL
+        value: "sqlite:////tmp/fieldscope-demo.db"

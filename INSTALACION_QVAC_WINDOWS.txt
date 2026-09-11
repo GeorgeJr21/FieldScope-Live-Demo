@@ -1,0 +1,25 @@
+FIELDSCOPE — INSTALACIÓN QVAC EN WINDOWS
+
+La guía vigente está en README.md, secciones "Installation — Windows", "Testing" y "Troubleshooting".
+
+Instalación limpia, desde backend:
+  py -3.12 -m venv venv
+  .\venv\Scripts\Activate.ps1
+  python -m pip install --upgrade pip
+  python -m pip install -r requirements.txt
+  npm ci
+  python qvac_warmup.py
+  python qvac_voice_warmup.py
+  python run.py
+
+Frontend en otra terminal, desde la raíz del repositorio:
+  py -3.12 -m http.server 5500 --bind 127.0.0.1 --directory frontend
+
+Abrir http://127.0.0.1:5500
+Health http://127.0.0.1:8001/api/health
+
+El checkout auditado ya tiene un entorno separado .venv en la raíz. El README incluye los comandos directos para ese entorno y una base de demo sintética aislada.
+
+Texto: QVAC QWEN3_600M_INST_Q4. Voz: QVAC WHISPER_TINY, conectado y probado con audio sintético. Vision: no implementado. Python SDK y worker fijados en 0.18.1. La primera descarga requiere Internet; repetir los warmups sin conexión para verificar offline en el equipo.
+
+Conservar .env, bases SQLite, cache y entornos existentes. No subir esos archivos a GitHub.

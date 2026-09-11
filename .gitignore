@@ -1,0 +1,40 @@
+# Local environments, dependencies and generated output
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+node_modules/
+.pytest_cache/
+.coverage*
+coverage/
+htmlcov/
+test-results/
+playwright-report/
+
+# Private data, models, recordings and logs (use the synthetic seed)
+*.db
+*.db-*
+*.sqlite*
+**/qvac-cache/
+**/voice-temp/
+*.gguf
+*.bin
+*.wav
+*.log
+.env
+.env.*
+!.env.example
+
+# Preserve local backups without publishing them
+_voice_patch_backup_*/
+backups/
+*.zip
+*.tmp
+pasted-text*.txt
+README_FINAL.md
+REEMPLAZAR_EN_WINDOWS.txt
+REVISION_REALIZADA.txt
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
